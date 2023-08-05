@@ -1,5 +1,6 @@
 # CSE134B HW4 Part 2 - Summer Session 1 2023 
 
-### Please find the further instructions on the canvas page for this assignment
-
-### Do not fork this repository in case of academic integrity concerns
+# .1 This homework is focusing on localStorageAPI.
+# .2 Doing small experiment to show the use of HTTP method 
+# such as GET/POST/PUT/DELETE using XMLHTTPRequest(), or fetch().
+# .3 Make simple web component using java script.
