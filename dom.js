@@ -35,7 +35,6 @@ function display(){
     const link1 = document.querySelector("#link1");
     const reflink = localStorage.getItem("link1");
     link1.setAttribute("href", reflink);
-    link1.style.display = ":inline";
     rp.innerHTML = pvalue;
     
 
