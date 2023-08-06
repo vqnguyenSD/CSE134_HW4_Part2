@@ -49,6 +49,9 @@ function loadRemote() {
                                 
                             
                         }
+                        h2{
+                            font-size: medium;
+                        }
                     `;
 
                     if (storedCollegeCourse) {
