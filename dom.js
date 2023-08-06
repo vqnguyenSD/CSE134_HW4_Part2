@@ -5,7 +5,7 @@ function init() {
     });
 
     element = document.getElementById("load-remote");
-    element.addEventListener('click', function (){
+    element.addEventListener('click', function () {
         loadRemote();
     });
 }
@@ -36,6 +36,14 @@ function loadRemote() {
                     console.log(storedCollegeCourse[0].cardNum);
                     const rootList = document.createElement('section');
 
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        img{
+                            width: 150px;
+                            height: 100px;
+                        }
+                    `;
+
                     if (storedCollegeCourse) {
                         storedCollegeCourse.forEach(card => {
                             const h2content = document.createElement('h2');
@@ -48,24 +56,32 @@ function loadRemote() {
                             rootList.appendChild(pcontent);
 
                             // link from a tag
-                            
+
 
                             const acontent = document.createElement('a');
-                            const  link = `${card.link}`;
+                            const link = `${card.link}`;
                             acontent.setAttribute('href', link);
                             acontent.innerHTML = "Read More";
                             rootList.appendChild(acontent);
+
+                            //Img
+                            const imgcontent = document.createElement('img');
+                            const imgsrc = `${card.img}`;
+                            imgcontent.setAttribute("src", imgsrc);
+                            rootList.appendChild(imgcontent);
                         });
                     }
 
+                    shadowRoot.appendChild(style);
                     shadowRoot.appendChild(rootList);
+
 
 
                 }
             }
             customElements.define('my-custom-element', MyCustomElement);
         })
-       
+
 
 }
 
