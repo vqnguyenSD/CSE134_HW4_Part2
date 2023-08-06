@@ -62,6 +62,12 @@ function loadRemote() {
                             pcontent.textContent = `${card.p}`;
                             rootList.appendChild(pcontent);
 
+                            //Img
+                            const imgcontent = document.createElement('img');
+                            const imgsrc = `${card.img}`;
+                            imgcontent.setAttribute("src", imgsrc);
+                            rootList.appendChild(imgcontent);
+
                             // link from a tag
 
 
@@ -71,11 +77,7 @@ function loadRemote() {
                             acontent.innerHTML = "Read More";
                             rootList.appendChild(acontent);
 
-                            //Img
-                            const imgcontent = document.createElement('img');
-                            const imgsrc = `${card.img}`;
-                            imgcontent.setAttribute("src", imgsrc);
-                            rootList.appendChild(imgcontent);
+                            
                         });
                     }
 
