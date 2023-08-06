@@ -18,7 +18,7 @@
 
 <body>
   <header>
-    <img src ="./Images/octavian-dan-b21Ty33CqVs-unsplash.jpg" alt ="Project Icon">
+    <img src="./Images/octavian-dan-b21Ty33CqVs-unsplash.jpg" alt="Project Icon">
     <nav>
       <ul>
         <li>Home</li>
@@ -30,22 +30,31 @@
   <h1>Project Card Gallery</h1>
   <hr>
   <main>
-    <section class="project-card" id="project-card">
+    <input type="button" id = "load-local" value="Load Local">
+    <input type="button" id = "load-remote" value="Load Remote">
+
+    <section id = "new-card">
+      <h3 id = "h3"></h3>
+      <img id = "img1">
+      <p id = "p"></p>
+      <a id = "link1">ReadMore</a>
+    </section>
+    <template id="project-card">
       <h2>Design my own portfolio</h2>
-      <img src = "./Images/iewek-gnos-hhUx08PuYpc-unsplash.jpg" alt = " Picture of Project Demo">
-      <p>Building my own portfolio website using HTML, CSS, Java Script. 
-        With the purpose of representing who I am, and what I have become. 
+      <img id = "img1" src="./Images/iewek-gnos-hhUx08PuYpc-unsplash.jpg" alt=" Picture of Project Demo">
+      <p>Building my own portfolio website using HTML, CSS, Java Script.
+        With the purpose of representing who I am, and what I have become.
         To impress the recruiter!</p>
       <a href="https://github.com/vqnguyenSD/CSE134_HW4_Part2"> Read More</a>
+    </template>
 
-    </section>
   </main>
   <footer>
-    <div id = " row-one">
+    <div id=" row-one">
       <p>Copyright Quang Nguyen</p>
     </div>
   </footer>
-  
+
   <!--
       This page will contain a list of cards which will contain cards that overview each project in 
       your portfolio. You will dynamically create these cards as CustomElements using JavaScript 
