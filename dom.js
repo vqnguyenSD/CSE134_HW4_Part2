@@ -32,16 +32,29 @@ function loadRemote() {
                     super();
 
                     const shadowRoot = this.attachShadow({ mode: 'open' });
-                    const storedCollegeCourse = data.record.courseList;
-                    console.log(storedCollegeCourse[0].courseName);
-                    const rootList = document.createElement('div');
+                    const storedCollegeCourse = data.record.projectCard;
+                    console.log(storedCollegeCourse[0].cardNum);
+                    const rootList = document.createElement('section');
 
                     if (storedCollegeCourse) {
-                        storedCollegeCourse.forEach(course => {
-                            const listItem = document.createElement('li');
-                            listItem.textContent = `${course.courseId}: ${course.courseName}`;
+                        storedCollegeCourse.forEach(card => {
+                            const h2content = document.createElement('h2');
+                            h2content.textContent = `${card.d}`;
+                            rootList.appendChild(h2content);
 
-                            rootList.appendChild(listItem);
+                            // p element
+                            const pcontent = document.createElement('p');
+                            pcontent.textContent = `${card.p}`;
+                            rootList.appendChild(pcontent);
+
+                            // link from a tag
+                            
+
+                            const acontent = document.createElement('a');
+                            const  link = `${card.link}`;
+                            acontent.setAttribute('href', link);
+                            acontent.innerHTML = "Read More";
+                            rootList.appendChild(acontent);
                         });
                     }
 
