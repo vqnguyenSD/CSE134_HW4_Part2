@@ -39,8 +39,15 @@ function loadRemote() {
                     const style = document.createElement('style');
                     style.textContent = `
                         img{
-                            width: 350px;
+                            width: 450px;
                             height: auto;
+                        }
+                        p{
+                            
+                            font-style: italic;
+                            text-align: start;
+                                
+                            
                         }
                     `;
 
